@@ -27,11 +27,11 @@ def summarize_text(text):
     """
     parser = PlaintextParser.from_string(text, Tokenizer("english"))
     summarizer = LexRankSummarizer()
-    summary = summarizer(parser.document, sentences_count=3)  # specify the number of sentences in the summary
+    summary = summarizer(parser.document, sentences_count=3) 
     return " ".join([str(sentence) for sentence in summary])
 
 def main():
-    audio_path = r"C:\Users\vaishali\Downloads\ttsMP3.com_VoiceText_2024-6-4_17-56-12.aiff"  # replace with your audio file path
+    audio_path = r"C:\Users\vaishali\Downloads\ttsMP3.com_VoiceText_2024-6-4_17-56-12.aiff" 
     transcript = transcribe_audio(audio_path)
     print("Transcript:")
     print(transcript)
